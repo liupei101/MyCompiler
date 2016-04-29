@@ -3,7 +3,7 @@
 #include <cstring>
 #include "lexical_analyzer.h"
 using namespace std;
-const int MAX_LENGTH = 105;
+const int MAX_LENGTH = 105, TY_EOL = 3;
 void clearOutputFile()
 {
     freopen("outfile/example.dyd", "w",stdout);
@@ -25,6 +25,7 @@ int main()
         {
             mainLexicalAnalyzer(Line, i, cur_line);
         }
+        successful("", TY_EOL);
         cur_line ++;
     }
     return 0;

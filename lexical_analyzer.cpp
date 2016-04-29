@@ -2,7 +2,7 @@
 #include <cstdio>
 #include "lexical_analyzer.h"
 const int MAX_LENGTH = 30;
-const int TY_Idt = 0, TY_Dit = 1, TY_Oth = 2;
+const int TY_Idt = 0, TY_Dit = 1, TY_Oth = 2, TY_EOL = 3;
 const int TY_OP = 0, TY_Unk = 1;
 char ch;
 int idx;
@@ -78,17 +78,21 @@ int table(const char* str)
 void successful(const char* str, int type)
 {
     freopen("outfile/example.dyd", "a+", stdout);
-    if(type == TY_Idt)
+    if(type == TY_Idt) //符号属于保留字类别
     {
         printf("%16s %2d\n", str, reserve(str));
     }
-    else if(type == TY_Idt)
+    else if(type == TY_Dit) // 符号为常数
     {
         printf("%16s %2d\n", str, 11);
     }
-    else
+    else if(type == TY_Oth) // 符号为比较运算符及其他
     {
         printf("%16s %2d\n", str, table(str));
+    }
+    else if(type = TY_EOL)
+    {
+        printf("%16s 24\n","EOLN");
     }
     fclose(stdout);
 }
@@ -189,7 +193,7 @@ bool mainLexicalAnalyzer(char* Line, int& i, int cur_line)
                 getChar(Line, i);
             }
             i --;
-            successful(token, TY_Idt);
+            successful(token, TY_Dit);
             break;
         case '<':
             getChar(Line, i);
