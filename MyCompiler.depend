@@ -1,14 +1,18 @@
 # depslib dependency file v1.0
-1461915716 source:e:\acm_code\project\mycompiler\lexical_analyzer.cpp
+1461932527 source:e:\acm_code\project\mycompiler\lexical_analyzer.cpp
 	<cstring>
 	<cstdio>
 	"lexical_analyzer.h"
 
 1460889139 e:\acm_code\project\mycompiler\lexical_analyzer.h
 
-1461915796 source:e:\acm_code\project\mycompiler\main.cpp
+1461935077 source:e:\acm_code\project\mycompiler\main.cpp
 	<iostream>
 	<cstdio>
 	<cstring>
 	"lexical_analyzer.h"
+	"parser.h"
+
+1461935531 e:\acm_code\project\mycompiler\parser.h
+	<string>
 
