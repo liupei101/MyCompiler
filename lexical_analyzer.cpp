@@ -2,7 +2,7 @@
 #include <cstdio>
 #include "lexical_analyzer.h"
 const int MAX_LENGTH = 30;
-const int TY_Idt = 0, TY_Dit = 1, TY_Oth = 2, TY_EOL = 3;
+const int TY_Idt = 0, TY_Dit = 1, TY_Oth = 2, TY_EOL = 3, TY_EOF = 4;
 const int TY_OP = 0, TY_Unk = 1;
 char ch;
 int idx;
@@ -90,9 +90,13 @@ void successful(const char* str, int type)
     {
         printf("%16s %2d\n", str, table(str));
     }
-    else if(type = TY_EOL)
+    else if(type == TY_EOL) //行结尾
     {
         printf("%16s 24\n","EOLN");
+    }
+    else if(type == TY_EOF) // 文件结尾
+    {
+        printf("%16s 25\n","EOF");
     }
     fclose(stdout);
 }
