@@ -5,6 +5,10 @@
                ; 23
             EOLN 24
          integer  3
+               n 10
+               ; 23
+            EOLN 24
+         integer  3
         function  7
                F 10
                ( 21
@@ -24,10 +28,10 @@
                0 11
             then  5
                F 10
-              := 20
+               = 12
                1 11
             EOLN 24
-            else  6
+           else5 10
                F 10
               := 20
                n 10

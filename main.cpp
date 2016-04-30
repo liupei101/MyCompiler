@@ -37,7 +37,6 @@ void lexical_analyzer()
         cur_line ++;
     }
     successful("", TY_EOF);
-    fclose(stdin);
 }
 
 void parser()
@@ -46,14 +45,13 @@ void parser()
     var_init();
     advance();
     A();
-    fclose(stdin);
 }
 int main()
 {
     clearOutputFile(); // 清空文件
 
     lexical_analyzer(); // 进行词法分析部分
-
+    printf("OVER!");
     parser(); // 进行语法分析部分
 
     return 0;

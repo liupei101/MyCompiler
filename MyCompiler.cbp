@@ -20,11 +20,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="example.pas" />
 		<Unit filename="lexical_analyzer.cpp" />
 		<Unit filename="lexical_analyzer.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="outfile/LexAnalyze.err" />
+		<Unit filename="outfile/SynAnalyze.err" />
+		<Unit filename="outfile/example.dyd" />
+		<Unit filename="outfile/example.dys" />
 		<Unit filename="parser.cpp" />
 		<Unit filename="parser.h">
 			<Option target="&lt;{~None~}&gt;" />

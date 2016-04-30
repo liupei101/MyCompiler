@@ -6,13 +6,21 @@
 
 1460889139 e:\acm_code\project\mycompiler\lexical_analyzer.h
 
-1461935077 source:e:\acm_code\project\mycompiler\main.cpp
+1462026720 source:e:\acm_code\project\mycompiler\main.cpp
 	<iostream>
 	<cstdio>
 	<cstring>
 	"lexical_analyzer.h"
 	"parser.h"
 
-1461935531 e:\acm_code\project\mycompiler\parser.h
+1462022864 e:\acm_code\project\mycompiler\parser.h
 	<string>
+
+1462026756 source:e:\acm_code\project\mycompiler\parser.cpp
+	<string>
+	<cstring>
+	<iostream>
+	<vector>
+	<cstdio>
+	"parser.h"
 
